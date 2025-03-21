@@ -1,9 +1,14 @@
 package Dio.banco_spring_poo;
+public class contaCorrente extends Conta {
 
-public class contaCorrente {
+	public contaCorrente(Cliente cliente) {
+		super(cliente);
+	}
 
-
-    private int agencia;
-    private int numero;
-    private int saldo;
+	@Override
+	public void imprimirExtrato() {
+		System.out.println("=== Extrato Conta Corrente ===");
+		super.imprimirInfosComuns();
+	}
+	
 }

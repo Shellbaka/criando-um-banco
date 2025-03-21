@@ -1,9 +1,14 @@
 package Dio.banco_spring_poo;
 
+public class contaPoupanca extends Conta {
 
-public class contaPoupanca {
+	public contaPoupanca(Cliente cliente) {
+		super(cliente);
+	}
 
-    private int agencia;
-    private int numero;
-    private int saldo;
+	@Override
+	public void imprimirExtrato() {
+		System.out.println("=== Extrato Conta Poupança ===");
+		super.imprimirInfosComuns();
+	}
 }
